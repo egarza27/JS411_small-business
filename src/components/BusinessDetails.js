@@ -8,19 +8,14 @@ const BusinessDetails = ({ listings }) => {
   console.log("ID:", id);
   console.log("Listings:", listings);
 
-  if (!listings) {
-    return <div>Loading...</div>;
-  }
-
-  const listing = listings.find((l) => l.id === Number(id));
+  const listing = listings.find((l) => {
+    if (!isNaN(parseInt(l.id))) {
+      return l.id === Number(id);
+    }
+    return l.id === id;
+  });
 
   console.log("Listing:", listing);
-
-  if (!listing) {
-    return <div>Listing not found</div>;
-  }
-
-  // Exclude 'id' and 'business_name' from the keys
   const { id: _, business_name: __, ...listingData } = listing;
 
   return (

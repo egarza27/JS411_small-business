@@ -3,10 +3,11 @@ import { combineReducers } from "redux";
 const listings = (state = [], action) => {
   switch (action.type) {
     case "ADD_LISTING":
-      return [...state, action.payload];
+      console.log(state, action);
+      return [...state, action.value];
     case "REMOVE_LISTING":
       const newState = [...state];
-      newState.splice(action.payload, 1);
+      newState.splice(action.value, 1);
       return newState;
     default:
       return state;

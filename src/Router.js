@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import AddListing from "./components/AddListing";
-import BusinessDetails from "./components/BusinessDetails";
-import Listings from "./components/Listings";
+import AddListing from "./containers/AddListing";
+import BusinessDetails from "./containers/BusinessDetails";
+import Listings from "./containers/Listings";
 import Login from "./components/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminView from "./components/AdminView";

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   TableCell,
@@ -7,10 +7,15 @@ import {
   TableHead,
   TableBody,
 } from "@mui/material";
-
 import { Link } from "react-router-dom";
 
-const Listings = (props) => {
+const Listings = ({ listings }) => {
+  const [updatedListings, setUpdatedListings] = useState([]);
+
+  useEffect(() => {
+    setUpdatedListings(listings);
+  }, [listings]);
+
   return (
     <Container maxWidth="lg" className="car-container">
       <Table>
@@ -23,7 +28,7 @@ const Listings = (props) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.listings.map((listing) => (
+          {updatedListings.map((listing) => (
             <TableRow key={listing.id} className="car-paper">
               <TableCell>
                 <Link
