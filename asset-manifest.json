@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/JS411_small-business/static/css/main.7ab79b9b.css",
+    "main.js": "/JS411_small-business/static/js/main.889251c4.js",
+    "index.html": "/JS411_small-business/index.html",
+    "main.7ab79b9b.css.map": "/JS411_small-business/static/css/main.7ab79b9b.css.map",
+    "main.889251c4.js.map": "/JS411_small-business/static/js/main.889251c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ab79b9b.css",
+    "static/js/main.889251c4.js"
+  ]
+}
